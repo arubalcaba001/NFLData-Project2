@@ -22,3 +22,5 @@ OSRS -- Offensive SRS
 Team offense quality relative to average (0.0) as measured by SRS (Simple Rating System)
 DSRS -- Defensive SRS
 Team defense quality relative to average (0.0) as measured by SRS (Simple Rating System)
+
+source: https://www.pro-football-reference.com/years/2018/#team_stats
