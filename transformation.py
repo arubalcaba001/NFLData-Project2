@@ -10,6 +10,7 @@ import extraction.py
 NFLPlayer2018_df=NFLPlayer2018_df.fillna(value=0)
 
 #Player Information 
+#Player Information 
 player_info_df=NFLPlayer2018_df[['Player', 'Player.1', 'Player.2','Player.3','Player.5']]
 
 #Change header
@@ -17,10 +18,12 @@ header=player_info_df.iloc[0]
 player_info_df=player_info_df[1:]
 player_info_df.columns=header
 
-#Rename Columns (SQL Table: player_info)
+#Rename Columns
 player_data=player_info_df.rename(columns = {'Rk':'Rank','Tm':'Team'})
+player_data=player_data.set_index('Rank')
 
 #Player and Game database
+
 player_game_df=NFLPlayer2018_df[['Player', 'Player.1','Player.2', 'Player.3','Games', 'Games.1']]
 
 #Change header
@@ -28,10 +31,11 @@ header2=player_game_df.iloc[0]
 player_game_df=player_game_df[1:]
 player_game_df.columns=header2
 
-#Rename Columns (SQL Table player_game)
+#Rename Columns
 player_game_data=player_game_df.rename(columns = {'Rk':'Rank','Tm':'Team'})
+player_game_data=player_game_data.set_index('Rank')
 
-#Player and Passing database
+#Player and Game database
 
 player_passing_df=NFLPlayer2018_df[['Player', 'Player.1','Player.2', 'Player.3','Passing', 'Passing.1','Passing.2', 'Passing.3', 'Passing.4' ]]
 
@@ -40,10 +44,11 @@ header3=player_passing_df.iloc[0]
 player_passing_df=player_passing_df[1:]
 player_passing_df.columns=header3
 
-#Rename Columns (SQL Table passing_player )
+#Rename Columns
 player_passing_data=player_passing_df.rename(columns = {'Rk':'Rank','Tm':'Team'})
+player_passing_data=player_passing_data.set_index('Rank')
 
-#Player and receiving 
+#Player and receiving
 player_rushing_df=NFLPlayer2018_df[['Player', 'Player.1','Player.2', 'Player.3','Rushing', 'Rushing.1','Rushing.2', 'Rushing.3' ]]
 
 #Change header
@@ -51,8 +56,10 @@ header4=player_rushing_df.iloc[0]
 player_rushing_df=player_rushing_df[1:]
 player_rushing_df.columns=header4
 
-#Rename Columns (SQL Table player_receiving)
+#Rename Columns
 player_rushing_data=player_rushing_df.rename(columns = {'Rk':'Rank','Tm':'Team'})
+
+player_rushing_data=player_rushing_data.set_index('Rank')
 
 #Player and receiving
 player_receiving_df=NFLPlayer2018_df[['Player', 'Player.1','Player.2', 'Player.3','Receiving', 'Receiving.1','Receiving.2', 'Receiving.3' ]]
@@ -62,8 +69,9 @@ header5=player_receiving_df.iloc[0]
 player_receiving_df=player_receiving_df[1:]
 player_receiving_df.columns=header5
 
-#Rename Columns (SQL Table player_receiving)
+#Rename Columns
 player_receiving_data=player_receiving_df.rename(columns = {'Rk':'Rank','Tm':'Team'})
+player_receiving_data=player_receiving_data.set_index('Rank')
 
 #Player and fumbles
 player_fumbles_df=NFLPlayer2018_df[['Player', 'Player.1','Player.2', 'Player.3','Fumbles', 'Fumbles.1']]
@@ -73,9 +81,9 @@ header6=player_fumbles_df.iloc[0]
 player_fumbles_df=player_fumbles_df[1:]
 player_fumbles_df.columns=header6
 
-#Rename Columns (SQL Table player_fumbles)
+#Rename Columns
 player_fumbles_data=player_fumbles_df.rename(columns = {'Rk':'Rank','Tm':'Team'})
-
+player_fumbles_data=player_fumbles_data.set_index('Rank')
 
 #Player and scoring
 player_scoring_df=NFLPlayer2018_df[['Player', 'Player.1','Player.2', 'Player.3','Scoring', 'Scoring.1']]
@@ -85,8 +93,9 @@ header7=player_scoring_df.iloc[0]
 player_scoring_df=player_scoring_df[1:]
 player_scoring_df.columns=header7
 
-#Rename Columns (SQL Table player_scoring)
+#Rename Columns
 player_scoring_data=player_scoring_df.rename(columns = {'Rk':'Rank','Tm':'Team'})
+player_scoring_data=player_scoring_data.set_index('Rank')
 
 #NFL SALARIES
 NFLPlayer2018_df['Full Name']=NFLPlayer2018_df['Player.1'].str.cat(NFLPlayer2018_df['Player.2'],sep=' ')
