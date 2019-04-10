@@ -1,5 +1,5 @@
 ﻿Player,Player,Player,Player,Player,Player,Games,Games,Passing,Passing,Passing,Passing,Passing,Rushing,Rushing,Rushing,Rushing,Receiving,Receiving,Receiving,Receiving,Receiving,Fumbles,Fumbles,Scoring,Scoring,Scoring,Fantasy,Fantasy,Fantasy,Fantasy,Fantasy,Fantasy,Fantasy
-Rk,First Name,Last Name,Tm,FantPos,Age,G,GS,Cmp,Att,Yds,TD,Int,Att,Yds,Y/A,TD,Tgt,Rec,Yds,Y/R,TD,Fmb,FL,TD,2PM,2PP,FantPt,PPR,DKPt,FDPt,VBD,PosRank,OvRank
+Rk,First_Name,Last_Name,Tm,FantPos,Age,G,GS,Cmp,Att,Yds,TD,Int,Att,Yds,Y/A,TD,Tgt,Rec,Yds,Y/R,TD,Fmb,FL,TD,2PM,2PP,FantPt,PPR,DKPt,FDPt,VBD,PosRank,OvRank
 1,Todd,Gurley,LAR,RB,24,14,14,0,0,0,0,0,256,1251,4.89,17,81,59,580,9.83,4,1,1,21,3,,313,372.1,379.1,342.6,178,1,1
 2,Saquon,Barkley,NYG,RB,21,16,16,0,0,0,0,0,261,1307,5.01,11,121,91,721,7.92,4,0,0,15,1,,295,385.8,391.8,340.3,159,2,2
 3,Christian,McCaffrey,CAR,RB,22,16,16,1,1,50,1,0,219,1098,5.01,7,124,107,867,8.1,6,4,1,13,,,279,385.5,392.5,332,143,3,3
