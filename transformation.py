@@ -123,5 +123,29 @@ def clean_playerstats(df):
     except:
         print("Player Statistics csv has NOT been transformed")
 
-if __name__ == '__main__':
-    clean_playerstats()
+
+def playersalaries(df):
+    try:
+        NFLPlayer2018_df['Full Name']=NFLPlayer2018_df['Player.1'].str.cat(NFLPlayer2018_df['Player.2'],sep=' ')
+        PlayerSalariesdf['Full Name']=PlayerSalariesdf['First Name'].str.cat(PlayerSalariesdf['Last Name'],sep=' ')
+        salaries2018_df = pd.merge(NFLPlayer2018_df, PlayerSalariesdf, on='Full Name')
+        player_salary_data=salaries2018_df[['First Name', 'Last Name', 'Team', 'Salary']]
+        print("Player Salaries csv has been transformed")
+    except:
+        print("Player Salaries csv has not been transformed")
+
+
+def teamdata(df3,df4):
+    try:
+        team_df = df3.append(df4)
+        team_df.reset_index(drop=True)
+        team_df.rename(columns = {"Tm":"Team"})
+        team_df["Tm"] = ["NE","MIA","BUF","NYJ","BAL","PIT","CLE","CIN","HOU","IND","TEN","JAX","KC","LAC","DEN","OAK","DAL",
+                 "PHI","WAS","NYG","CHI","MIN","GB","DET","NO","CAR","ALT","TB","LAR","SEA","SF","ARI"]
+        print("Team data has been transformed")
+    except:
+        print("Team data has not been transformed")
+
+# if __name__ == '__main__':
+#     clean_playerstats()
+#     playersalaries()
