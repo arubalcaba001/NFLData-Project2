@@ -16,68 +16,89 @@ CREATE TABLE team (
     PRIMARY KEY (id)
 );
 
-CREATE TABLE Players (
-    player_id INT AUTO_INCREMENT NOT NULL,
+CREATE TABLE player_salary (
+    rank INT AUTO_INCREMENT NOT NULL,
     First_name VARCHAR(50),
     Last_name VARCHAR(50),
     Team VARCHAR(150),
-    Age INT,
-    Salary INT,
-    PRIMARY KEY (player_id)
+    Salary VARCHAR(50),
+    PRIMARY KEY (rank)
 );
 
 CREATE TABLE player_game_data (
-    player_id INT AUTO_INCREMENT NOT NULL,
+    rank INT AUTO_INCREMENT NOT NULL,
     First_name VARCHAR(50),
     Last_name VARCHAR(50),
     Team VARCHAR(150),
-    G INT,
-    GS INT,
-    PRIMARY KEY (player_id)
+    G INT(11),
+    GS INT(11),
+    PRIMARY KEY (rank)
 );
 
 CREATE TABLE player_passing_data (
-    player_id INT AUTO_INCREMENT NOT NULL,
+    rank INT AUTO_INCREMENT NOT NULL,
     First_name VARCHAR(50),
     Last_name VARCHAR(50),
     Team VARCHAR(150),
-    Cmp INT,
-    Att INT,
-    Yds INT,
-    TD INT,
-    PRIMARY KEY (player_id)
+    Cmp INT(11),
+    Att INT(11),
+    Yds INT(11),
+    TD INT(11),
+    IT INT(11),
+    PRIMARY KEY (rank)
 );
 
 CREATE TABLE player_rushing_data (
-    player_id INT AUTO_INCREMENT NOT NULL,
+    rank INT AUTO_INCREMENT NOT NULL,
     First_name VARCHAR(50),
     Last_name VARCHAR(50),
     Team VARCHAR(150),
     Att INT,
     Yds INT,
-    Y/A INT,
+    YA_rate INT,
     TD INT,
-    PRIMARY KEY (player_id)
+    PRIMARY KEY (rank)
 );
 
 
 CREATE TABLE player_fumbles_data (
-    player_id INT AUTO_INCREMENT NOT NULL,
+    rank INT AUTO_INCREMENT NOT NULL,
     First_name VARCHAR(50),
     Last_name VARCHAR(50),
     Team VARCHAR(150),
     Fmb INT,
     Fl INT,
-    PRIMARY KEY (player_id)
+    PRIMARY KEY (rank)
 );
 
 
 CREATE TABLE player_scoring_data (
-    player_id INT AUTO_INCREMENT NOT NULL,
+    rank INT AUTO_INCREMENT NOT NULL,
     First_name VARCHAR(50),
     Last_name VARCHAR(50),
     Team VARCHAR(150),
     TD INT,
     2PM INT,
-    PRIMARY KEY (player_id)
+    PRIMARY KEY (rank)
+);
+
+CREATE TABLE player_info (
+   rank INT AUTO_INCREMENT NOT NULL,
+   First_name VARCHAR(50),
+   Last_name VARCHAR(50),
+   Team VARCHAR(50),
+   Age INT(11),
+   PRIMARY KEY (rank)
+);
+
+CREATE TABLE player_receiving_data (
+    rank INT AUTO_INCREMENT NOT NULL,
+    First_name VARCHAR(50),
+    Last_name VARCHAR(50),
+    Team VARCHAR(150),
+    TGT INT,
+    REC INT,
+    YDS INT,
+    YR_rate INT,
+    PRIMARY KEY (rank)
 );
