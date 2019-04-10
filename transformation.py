@@ -4,7 +4,7 @@ from sqlalchemy import create_engine
 import extraction
 
 
-def clean_playerstats():
+def clean_playerstats(df):
 #PLAYER INFORMATION
 #Dropping Nan from NFLPayer2018_df
     try:
@@ -118,9 +118,10 @@ def clean_playerstats():
         team_df.columns
         team_df = team_df[['Team', 'Tm', 'W', 'L', 'T', 'W-L%', 'PF', 'PA', 'PD', 'MoV', 'SoS', 'SRS',
                'OSRS', 'DSRS']]
+        print("Player Statistics csv has been transformed")
 
     except:
-        print("failed")
+        print("Player Statistics csv has NOT been transformed")
 
 if __name__ == '__main__':
     clean_playerstats()
