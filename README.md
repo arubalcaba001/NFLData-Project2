@@ -1,48 +1,48 @@
-NFLData-Project2
+# NFLData-Project2
 
-Extraction
+## Extraction
 
 You can also web scrape from the three websites if you do not want to store the data locally.  However in the interest of time we download
 CSV
 
-NFL Player Statistics 
+### NFL Player Statistics
 Download CSV files for Player Statistics from \
 https://www.pro-football-reference.com/years/2018/fantasy.htm \
 Go to share&more and get table as CSV and download \
 In CSV had to separate player column to first name and last name with text-column function \
-save as 2018NFLPlayerStatistics.csv 
+save as 2018NFLPlayerStatistics.csv
 
-NFL Player Salary
+### NFL Player Salary
 Download CSV files for Player Salary from \
 https://www.pro-football-reference.com/players/salary.htm \
 Go to share&more and get table as CSV and download \
 In CSV had to separate player column to first name and last name with text-column function \
-save as PlayerSalaries.csv 
+save as PlayerSalaries.csv
 
-NFL Team Information 
+### NFL Team Information
 https://www.pro-football-reference.com/years/2018/ \
 Download CSV files for both AFC and NFC \
 Go to share&more and get table as CSV and download \
 Team Accronyms from wikipidia \
-save as sportsref_download_AFC_2018.csv and sportsref_download_NFC_2018.csv 
+save as sportsref_download_AFC_2018.csv and sportsref_download_NFC_2018.csv
 
-Tranformation 
+## Tranformation
 
-NFL Player Statistics
+### NFL Player Statistics
 Fill in NaN with 0 \
-Keep the headings of Player, Games,Passing,Rushing, Receiving,Fumbles, \ 
-Scoring as this will help guide you to create tables 
+Keep the headings of Player, Games,Passing,Rushing, Receiving,Fumbles, \
+Scoring as this will help guide you to create tables
 
 Create the following databases to convert them into Tables \
 Table: player_info \
-Grab all of the columns that have player in the heading \ 
+Grab all of the columns that have player in the heading \
 Remove that header and you are left with a new Header \
 Rename columns RK to Rank and Tm to Team
 
 Table: player_info
 Grab columns: 'Player', 'Player.1', 'Player.2','Player.3','Player.5' \
 Remove that header and you are left with a new Header \
-Rename column \s RK to Rank and Tm to Team 
+Rename column \s RK to Rank and Tm to Team
 
 Table: player_game_data
 columns: 'Player', 'Player.1','Player.2', 'Player.3','Games', 'Games.1''Player', 'Player.1', 'Player.2','Player.3','Player.5' \
@@ -75,16 +75,16 @@ Remove that header and you are left with a new Header\
 Rename columns RK:Rank, Tm:Team
 
 
-NFL Player Salary
+### NFL Player Salary
 Create Column for Full Name and combine\
 Merge NFLPlayer data base with Player Salary
 
-NFL Team Information
+### NFL Team Information
 Rename columns Tm:Team\
 Enter Team Acronyms to match up with Team Name\
 Grab the following to make a database: 'Team', 'Tm', 'W', 'L', 'T', 'W-L%', 'PF', 'PA', 'PD'
 
-Load 
+## Load
 
 Create Schema with Schema file\
 Create the following tables using your above database\
@@ -97,4 +97,3 @@ player_fumbles_data\
 player_scoring_data\
 player_salary\
 team
-
